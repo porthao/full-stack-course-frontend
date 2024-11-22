@@ -1,13 +1,12 @@
-'use client'
+"use client";
 import { useParams } from "next/navigation";
 
 const ProductPage: React.FC = () => {
-  const params = useParams()
+  const params: any = useParams();
   const { id } = params;
   return <h1>Product ID: {id}</h1>;
 };
 export default ProductPage;
-
 
 // let greeter = 'say hi'
 // let times = 4;

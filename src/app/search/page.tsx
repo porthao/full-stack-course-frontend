@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 
 // Separate component to safely use client-side hooks
 const SearchPageContent: React.FC = () => {
-  const searchParams = useSearchParams();
+  const searchParams: any = useSearchParams();
   const [search, setSearch] = useState<string | null>(null);
   const [term, setTerm] = useState<string | null>(null);
 
@@ -17,7 +17,11 @@ const SearchPageContent: React.FC = () => {
 
   if (!search && !term) return null; // Prevent displaying mismatched empty state
 
-  return <h1>Search Results for: {search} {term}</h1>;
+  return (
+    <h1>
+      Search Results for: {search} {term}
+    </h1>
+  );
 };
 
 const SearchPage: React.FC = () => {
