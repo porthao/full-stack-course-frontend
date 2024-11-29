@@ -30,6 +30,7 @@ const UserProfileForm = () => {
         const result: User | any = await userServices.loadUserProfile();
         if (result?.message === "jwt expired") {
           const refreshTokenResult: any = await userServices.userRefreshToken();
+          console.log({ refreshTokenResult });
           localStorage.setItem("token", refreshTokenResult?.token);
           localStorage.setItem(
             "refreshToken",
