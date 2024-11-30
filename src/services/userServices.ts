@@ -34,7 +34,7 @@ class UserServices {
     let loginResult: any = {};
 
     loginResult = fetch(
-      "http://localhost:4000/api/v1/users/login",
+      "http://54.169.70.120:4000/api/v1/users/login",
       requestOptions
     )
       .then((response) => response.text())
